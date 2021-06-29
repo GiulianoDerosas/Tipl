@@ -5,7 +5,16 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>New App!</Text>
+      
+      <View style={styles.cocktailContainer}>
+        
+        <View style={styles.titles}>
+          <Text style={styles.title}>Orange Coupe</Text>
+          <Text style={styles.subtitle}>Sweet & Citrusy</Text>
+        </View>
+
+      </View>
+
       <StatusBar style="auto" />
     </View>
   );
