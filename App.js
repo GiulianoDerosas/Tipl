@@ -1,12 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
       
       <View style={styles.cocktailContainer}>
+
+        <ImageBackground 
+        source={require('./assets/images/orangeCoupe.jpeg')}
+        style={styles.image}></ImageBackground>
         
         <View style={styles.titles}>
           <Text style={styles.title}>Orange Coupe</Text>
@@ -39,9 +43,17 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 40,
     fontWeight: '600',
+    color: '#fff'
   },
   subtitle: {
-
+    fontSize: 16,
+    color: '#fff'
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+    position: 'absolute',
   }
 
 });
