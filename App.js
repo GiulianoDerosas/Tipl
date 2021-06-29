@@ -27,4 +27,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  cocktailContainer: {
+    width: '100%',
+    height: '100%',
+  },
+  titles: {
+    marginTop: '30%',
+    width: '100%',
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 40,
+    fontWeight: '600',
+  },
+  subtitle: {
+
+  }
+
 });
