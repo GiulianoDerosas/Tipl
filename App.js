@@ -1,16 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import Cocktail from './components/Cocktail';
+import CocktailList from './components/CocktailList/index';
 
 export default function App() {
   return (
     <View style={styles.container}>
 
-      <Cocktail 
-      name={"Orange Coupe"}
-      tagline={"Sweet & Citrusy"}
-      image={require("./assets/images/orangeCoupe.jpeg")}/>
+      <CocktailList/>
 
       <StatusBar style="auto" />
     </View>
