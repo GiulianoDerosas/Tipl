@@ -1,11 +1,30 @@
-import React from 'react';
-import {View, Text} from 'react-native';
-import styles from './styles';
+import React from "react";
+import { View, Text, Button, ImageBackground } from "react-native";
+import styles from "./styles";
 
-const Home = () => {
+const Home = ({ navigation }) => {
+  const pressHandler = () => {
+    navigation.push("CocktailList");
+  };
+
   return (
     <View style={styles.container}>
-        <Text>HomeScreen Test!</Text>
+
+      <ImageBackground
+        source={require("../../assets/images/homepage.jpeg")}
+        style={styles.image}
+      />
+
+      <View style={styles.titles}> 
+        <Text style={styles.title}>Welcome to Tipl</Text>
+      </View>
+      
+      <View>
+        <Button 
+        title="Go To Drinks List" onPress={pressHandler}
+        styles={styles.button} />
+      </View>
+
     </View>
   );
 };

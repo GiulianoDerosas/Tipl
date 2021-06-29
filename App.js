@@ -9,17 +9,17 @@ import Navigator from './routes/homeStack';
 export default function App() {
   return (
 
-    <View style={styles.container}>
+    <Navigator/>
 
-      <Header/>
+    // <View style={styles.container}>
 
-      <Navigator/>
+    //   <Header/>
       
-      {/* <CocktailList/> */}
+    //   <CocktailList/>
 
-      <StatusBar style="auto" />
+    //   <StatusBar style="auto" />
 
-    </View>
+    // </View>
 
   );
 }
