@@ -14,7 +14,7 @@ const CocktailList = (props) => {
         renderItem={({item}) => <CocktailItem cocktail={item} />}
         showsVerticalScrollIndicator={false}
         snapToAlignment={'start'}
-        decelerationRate={'fast'}
+        decelerationRate={'normal'}
         snapToInterval={Dimensions.get('window').height}
       />
 
