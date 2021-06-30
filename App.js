@@ -1,26 +1,17 @@
 import 'react-native-gesture-handler';
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import CocktailList from './components/CocktailList/index';
+import { StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import Tabs from './navigation/tabs'
 import Header from './components/Header';
-import Navigator from './routes/homeStack';
+
 
 export default function App() {
   return (
-
-    <Navigator/>
-
-    // <View style={styles.container}>
-
-    //   <Header/>
-      
-    //   <CocktailList/>
-
-    //   <StatusBar style="auto" />
-
-    // </View>
-
+    <NavigationContainer>
+      <Header></Header>
+      <Tabs />
+    </NavigationContainer>
   );
 }
 
