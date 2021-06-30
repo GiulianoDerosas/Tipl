@@ -1,23 +1,24 @@
 import React from 'react';
-import {View, FlatList, Dimensions, SectionList} from 'react-native';
+import {View, FlatList, Dimensions} from 'react-native';
 import CocktailItem from "../CocktailItem";
-import PreperationItem from "../PreperationItem"
 
 import styles from './styles';
 import cocktails from './cocktails';
+
 
 const CocktailList = (props) => {
   return (
     <View style={styles.container}>
 
-      <SectionList
-        sections={cocktails}
+      <FlatList
+        data={cocktails}
         renderItem={({item}) => <CocktailItem cocktail={item} />}
         showsVerticalScrollIndicator={false}
         snapToAlignment={'start'}
         decelerationRate={'normal'}
         snapToInterval={Dimensions.get('window').height}
       />
+
     </View>
   );
 };

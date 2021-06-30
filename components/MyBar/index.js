@@ -1,26 +1,19 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { View, FlatList, Checkbox } from "react-native";
 import styles from "./styles";
+import BarItem from "../BarItem";
+import ingredients from "../BarItem";
 
-const MyBar = ({ navigation }) => {
-  const pressHandler = () => {
-    navigation.navigate("Home");
-  };
+const MyBar = (props) => {
 
   return (
+
     <View style={styles.container}>
 
-      <View style={styles.titles}>
-        <Text style={styles.title}>My Bar!</Text>
-      </View>
+      {ingredients.forEach(ingredient => (
+        <BarItem name={ingredient.name}/>
+      ))}
 
-      <View>
-        <Button
-          title="Go To Home"
-          onPress={pressHandler}
-          styles={styles.button}
-        />
-      </View>
     </View>
   );
 };

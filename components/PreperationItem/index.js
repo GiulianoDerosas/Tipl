@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Button } from "react-native";
 import styles from "./styles";
 
-const PreperationItem = ({ navigation }) => {
+const PreperationItem = ({ }) => {
 
   return (
     <View style={styles.container}>
