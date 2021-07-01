@@ -1,8 +1,8 @@
 import React from "react";
 import { View, FlatList, Checkbox } from "react-native";
 import styles from "./styles";
-import BarItem from "../BarItem";
-import ingredients from "../BarItem";
+import BarItem from "../BarItem/index";
+import ingredients from "../BarItem/ingredients";
 
 const MyBar = (props) => {
 
@@ -10,9 +10,10 @@ const MyBar = (props) => {
 
     <View style={styles.container}>
 
-      {ingredients.forEach(ingredient => (
-        <BarItem name={ingredient.name}/>
-      ))}
+      <FlatList
+        data={ingredients}
+        renderItem={({item}) => <BarItem ingredient={item} />}
+        />
 
     </View>
   );
