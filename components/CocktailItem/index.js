@@ -62,7 +62,7 @@ export default function CocktailItem(props) {
                 }}>
                 <View style={{
                     width: ITEM_WIDTH,
-                    height: ITEM_HEIGHT,
+                    height: ITEM_HEIGHT * 1.2,
                     overflow: 'hidden',
                     alignItems: 'center',
                     borderRadius: 14,
@@ -71,7 +71,7 @@ export default function CocktailItem(props) {
                     source={{uri: item.photo}}
                     style={{
                       width: ITEM_WIDTH * 1.4,
-                      height: ITEM_HEIGHT* 1,
+                      height: ITEM_HEIGHT* 1.2,
                       resizeMode: 'cover'
                     }}
                     />
