@@ -16,14 +16,12 @@ const Tabs = () => {
             style: {
                 position: 'absolute',
                 bottom: 25,
-                left: 20,
-                right: 20,
+                left: 15,
+                right: 15,
                 elevation: 0,
                 backgroundColor: '#2e2e2e',
-                borderRadius: 15,
-                height: 90,
-                elevation: 8
-
+                borderRadius: 18,
+                height: 70,
             }
         }}>
             <Tab.Screen 
@@ -31,7 +29,7 @@ const Tabs = () => {
             component={Home} 
             options={{
                 tabBarIcon: ({focused}) => (
-                    <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
+                    <View style={{alignItems: 'center', justifyContent: 'center', top: 15}}>
                         <Image
                         source={require('../assets/icons/home.png')}
                         resizeMode="contain"
@@ -53,7 +51,7 @@ const Tabs = () => {
             component={CocktailList}
             options={{
                 tabBarIcon: ({focused}) => (
-                    <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
+                    <View style={{alignItems: 'center', justifyContent: 'center', top: 15}}>
                         <Image
                         source={require('../assets/icons/drinks.png')}
                         resizeMode="contain"
@@ -76,7 +74,7 @@ const Tabs = () => {
             component={MyBar}
             options={{
                 tabBarIcon: ({focused}) => (
-                    <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
+                    <View style={{alignItems: 'center', justifyContent: 'center', top: 15}}>
                         <Image
                         source={require('../assets/icons/mybar.png')}
                         resizeMode="contain"

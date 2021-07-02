@@ -14,14 +14,17 @@ const styles = StyleSheet.create({
         backgroundColor: "#dee",
         width: Dimensions.get('window').width,
         justifyContent: "space-between",
+        backgroundColor: '#232324',
+
       },
       checkbox: {
         alignSelf: "flex-end",
-        justifyContent: "flex-end"
+        justifyContent: "flex-end",
       },
       label: {
         margin: 8,
-        alignSelf: "flex-start"
+        alignSelf: "flex-start",
+        color: '#fff'
       },
 });
 

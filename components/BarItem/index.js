@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { View, CheckBox, Text } from "react-native";
+import { View, Switch, Text } from "react-native";
 import styles from "./styles";
 
 
@@ -14,10 +14,12 @@ const BarItem = (props) => {
     <View>
       <View style={styles.checkboxContainer}>
         <Text style={styles.label}>{name}</Text>
-        <CheckBox
+        <Switch
           value={isSelected}
           onValueChange={setSelection}
           style={styles.checkbox}
+          trackColor={{ true: '#6ccef2', false: '#ffa68b' }}
+          ios_backgroundColor="#ffa68b"
         />
       </View>
     </View>

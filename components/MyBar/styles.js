@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
-    marginTop: 140
+    backgroundColor: '#121212',
   },
 });
 

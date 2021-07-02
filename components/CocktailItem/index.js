@@ -58,7 +58,7 @@ export default function CocktailItem(props) {
                 },
                 borderRadius: 18,
                 padding: 8,
-                backgroundColor: '#e2e2e2'
+                backgroundColor: '#232324'
                 }}>
                 <View style={{
                     width: ITEM_WIDTH,
