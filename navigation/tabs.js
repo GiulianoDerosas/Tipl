@@ -19,9 +19,10 @@ const Tabs = () => {
                 left: 20,
                 right: 20,
                 elevation: 0,
-                backgroundColor: '#ffffff',
+                backgroundColor: '#2e2e2e',
                 borderRadius: 15,
                 height: 90,
+                elevation: 8
 
             }
         }}>
@@ -37,10 +38,10 @@ const Tabs = () => {
                         style={{
                             width: 35,
                             height: 35,
-                            tintColor: focused ? '#121212' : '#30b6ba'
+                            tintColor: focused ? '#6ccef2' : '#ffa68b'
                         }}
                         />
-                        <Text style={{fontSize: 12, color: focused ? '#121212' : '#30b6ba'}}>
+                        <Text style={{fontSize: 12, color: focused ? '#6ccef2' : '#ffa68b'}}>
                             HOME
                         </Text>
                     </View>
@@ -59,10 +60,10 @@ const Tabs = () => {
                         style={{
                             width: 35,
                             height: 35,
-                            tintColor: focused ? '#121212' : '#30b6ba'
+                            tintColor: focused ? '#6ccef2' : '#ffa68b'
                         }}
                         />
-                        <Text style={{fontSize: 12, color: focused ? '#121212' : '#30b6ba'}}>
+                        <Text style={{fontSize: 12, color: focused ? '#6ccef2' : '#ffa68b'}}>
                             DRINKS
                         </Text>
                     </View>
@@ -82,17 +83,17 @@ const Tabs = () => {
                         style={{
                             width: 35,
                             height: 35,
-                            tintColor: focused ? '#121212' : '#30b6ba'
+                            tintColor: focused ? '#6ccef2' : '#ffa68b'
                         }}
                         />
-                        <Text style={{fontSize: 12, color: focused ? '#121212' : '#30b6ba'}}>
+                        <Text style={{fontSize: 12, color: focused ? '#6ccef2' : '#ffa68b'}}>
                             MY BAR
                         </Text>
                     </View>
                 )
             }}
             />
-            
+
             {/* <Tab.Screen name="Blog" component={Blog}/> */}
         </Tab.Navigator>
     )
