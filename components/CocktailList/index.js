@@ -11,11 +11,12 @@ const CocktailList = (props) => {
     <View style={styles.container}>
 
       <FlatList
+        style={styles.list}
         data={cocktails}
         renderItem={({item}) => <CocktailItem cocktail={item} />}
         showsVerticalScrollIndicator={false}
         snapToAlignment={'start'}
-        decelerationRate={'normal'}
+        decelerationRate={'fast'}
         snapToInterval={Dimensions.get('window').height}
       />
 

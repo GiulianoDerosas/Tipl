@@ -1,33 +1,28 @@
 export default [
     {
     key: "1",
-    name: 'Orange Coupe',
-    tagline: 'Sweet & Citrus',
-    image: require('../../assets/images/orangeCoupe.jpeg'),
+    name: 'Whisky Sour',
+    image: [require('../../assets/images/orangeCoupe.jpeg'), require('../../assets/images/prep.jpg')],
+    ingredients: ["whisky", "lemon", "sugar", "eggwhite"],
   }, {
     key: "2",
-    name: 'Blue Coupe',
-    tagline: 'Bubblegum & Blueberry',
-    image: require('../../assets/images/blueCoupe.jpeg'),
+    name: 'Old Fashioned',
+    image: [require('../../assets/images/blueCoupe.jpeg'), require('../../assets/images/prep.jpg')],
+    ingredients: ["whisky", "sugar", "angostura", "orangebitters"],
   }, {
     key: "3",
-    name: 'Pink Coupe',
-    tagline: 'Strawberry & Vanilla',
-    image: require('../../assets/images/pinkCoupe.jpeg'),
+    name: 'Classic Daiquiri',
+    image: [require('../../assets/images/pinkCoupe.jpeg'), require('../../assets/images/prep.jpg')],
+    ingredients: ["rum", "sugar", "lime"],
   }, {
     key: "4",
-    name: 'Yellow Coupe',
-    tagline: 'Tart & Bitter',
-    image: require('../../assets/images/yellowCoupe.jpeg'),
+    name: 'Sidecar',
+    image: [require('../../assets/images/yellowCoupe.jpeg'), require('../../assets/images/prep.jpg')],
+    ingredients: ["brandy", "lemon", "sugar"],
   }, {
     key: "5",
-    name: 'Orange Rocks',
-    tagline: 'Smoky & Strong',
-    image: require('../../assets/images/orangeRocks.jpeg'),
-  }, {
-    key: "6",
-    name: 'Yellow Wine',
-    tagline: 'Delicate & Floral',
-    image: require('../../assets/images/yellowWine.jpeg'),
+    name: "Pete's Word",
+    image: [require('../../assets/images/orangeRocks.jpeg'), require('../../assets/images/prep.jpg')],
+    ingredients: ["whisky", "lime", "chartreuse", "maraschino"],
   }
 ];
