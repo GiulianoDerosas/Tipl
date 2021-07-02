@@ -12,19 +12,22 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         marginBottom: 20,
         backgroundColor: "#dee",
-        width: Dimensions.get('window').width,
+        width: Dimensions.get('window').width * 0.9,
         justifyContent: "space-between",
         backgroundColor: '#232324',
-
+        marginLeft: 20,
+        marginRight: 20,
+        borderRadius: 18
       },
       checkbox: {
-        alignSelf: "flex-end",
-        justifyContent: "flex-end",
+        alignSelf: "center",
+        justifyContent: "center",
       },
       label: {
-        margin: 8,
+        margin: 12,
         alignSelf: "flex-start",
-        color: '#fff'
+        color: '#fff',
+        fontSize: 16
       },
 });
 
