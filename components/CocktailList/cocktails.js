@@ -21,8 +21,13 @@ export default [
     ingredients: ["brandy", "lemon", "sugar"],
   }, {
     key: "5",
-    name: "Pete's Word",
+    name: "Negroni",
     image: [require('../../assets/images/orangeRocks.jpeg'), require('../../assets/images/prep.jpg')],
-    ingredients: ["whisky", "lime", "chartreuse", "maraschino"],
+    ingredients: ["gin", "sweetvermouth", "campari"],
+  }, {
+    key: "6",
+    name: "Mojito",
+    image: [require('../../assets/images/orangeRocks.jpeg'), require('../../assets/images/prep.jpg')],
+    ingredients: ["rum", "lime", "sugar", "soda"],
   }
 ];

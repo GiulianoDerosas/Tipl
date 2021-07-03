@@ -16,12 +16,12 @@ const Home = ({ navigation }) => {
     <View style={styles.container}>
 
       <ImageBackground
-        source={require("../../assets/images/homepage.jpg")}
+        source={{uri: 'https://i.ibb.co/0QjYm20/Homepage.png'}}
         style={styles.image}
       />
 
       <View style={styles.titles}>
-        <Text style={styles.title}>Homepage</Text>
+
       </View>
 
     </View>

@@ -5,13 +5,17 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     flex: 1,
     width: '100%',
-    height: '100%'
+    height: '100%',
+    backgroundColor: '#121212'
   },
   image: {
     width: '100%',
-    height: '100%',
+    height: '90%',
     resizeMode: 'contain',
     position: 'absolute',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    marginTop: 100
   },
   titles: {
     marginTop: '30%',
