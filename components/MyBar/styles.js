@@ -12,13 +12,13 @@ const styles = StyleSheet.create({
     height: 40,
     width: Dimensions.get('window').width * 0.8,
     borderWidth: 1,
-    marginTop: 170,
-    borderColor: '#009688',
+    marginTop: 150,
+    borderColor: '#6ccef2',
     alignSelf: 'center',
     color: '#fff',
     fontSize: 16,
     backgroundColor: '#232324',
-    borderRadius: 18
+    borderRadius: 18,
   }
 });
 

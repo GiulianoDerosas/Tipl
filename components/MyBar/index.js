@@ -28,7 +28,7 @@ const MyBar = (props) => {
       return(
         <View style={{ marginTop: 20}}>
         <FlatList
-          data={filteredIngredients}
+          data={filteredIngredients.sort((a,b) => a.key.localeCompare(b.key))}
           renderItem={({item}) => <BarItem
           ingredient={item} />}
           />
