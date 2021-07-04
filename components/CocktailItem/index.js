@@ -27,6 +27,18 @@ const images = [
   "https://i.ibb.co/XY0yxx7/PrepMock.png",
 ];
 
+// const masterdata = cocktails.map((cocktail) => {
+//     cocktail.image.map((image, index) => ({
+//     key: String(index + 1),
+//     photo: image,
+//   }));
+// })
+
+  // ___________________________________________________________________________________________________
+  // Need help rendering a specific image for a cocktail item.
+  // ___________________________________________________________________________________________________
+
+
 const data = images.map((image, index) => ({
   key: String(index + 1),
   photo: image,
@@ -49,8 +61,9 @@ export default function CocktailItem(props) {
             <View
               style={{
                 width,
-                justifyContent: "center",
+                justifyContent: "flex-start",
                 alignItems: "center",
+                marginTop: 0,
                 height,
               }}
             >
@@ -79,7 +92,7 @@ export default function CocktailItem(props) {
                   }}
                 >
                   <Image
-                    source={{ uri: item.photo }}
+                    source={{uri: item.photo}}
                     style={{
                       width: ITEM_WIDTH * 1.4,
                       height: ITEM_HEIGHT * 1.2,
