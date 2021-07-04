@@ -20,7 +20,11 @@ const ITEM_HEIGHT = ITEM_WIDTH * 1.47;
 const images = [
   "https://i.ibb.co/qk31sHs/lolol.png",
   "https://i.ibb.co/687PhLX/lelele.png",
-  "https://i.ibb.co/NnbwBKf/PrepMock.png",
+  "https://i.ibb.co/3NdDpnw/Mojito.png",
+  "https://i.ibb.co/6wTJgPy/Negroni.png",
+  "https://i.ibb.co/fNDrNs9/Old-Fashioned.png",
+  "https://i.ibb.co/v1n5WH6/Daiquiri.png",
+  "https://i.ibb.co/XY0yxx7/PrepMock.png",
 ];
 
 const data = images.map((image, index) => ({
