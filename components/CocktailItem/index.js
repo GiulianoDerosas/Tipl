@@ -28,9 +28,8 @@ const images = [
 ];
 
 // const masterdata = cocktails.map((cocktail) => {
-//     cocktail.image.map((image, index) => ({
-//     key: String(index + 1),
-//     photo: image,
+//   cocktail.image.map((imageURI) => ({
+//   photo: imageURI
 //   }));
 // })
 

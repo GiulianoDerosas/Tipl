@@ -21,7 +21,7 @@ const CocktailList = (props) => {
   return (
     <View style={styles.container}>
 
-        <TextInput
+      <TextInput
         style={styles.search}
         onChangeText={handleChange}
         placeholder="Search Cocktails 🔍"
@@ -31,18 +31,17 @@ const CocktailList = (props) => {
       />
 
       <View style={styles.container}>
-
         <FlatList
           style={styles.list}
-          data={cocktails}
+          data={filteredCocktails}
           renderItem={({item}) => <CocktailItem cocktail={item} />}
           showsVerticalScrollIndicator={false}
           snapToAlignment={'start'}
           decelerationRate={'fast'}
           snapToInterval={Dimensions.get('window').height}
         />
-
-      </View>
+        </View>
+        
 
     </View>
   );

@@ -12,13 +12,15 @@ const BarItem = (props) => {
 
   const handleChange = () => {
     setSelection(!isSelected);
-    if (isSelected) {
+    if (isSelected === true) {
       ownedIngredients.push(key)
+      console.log(key);
+      console.log(ownedIngredients);
     } else {
       let index = ownedIngredients.indexOf(key);
       ownedIngredients.splice(index , 1)
+      console.log(ownedIngredients);
     }
-    console.log(ownedIngredients);
   };
 
   // ___________________________________________________________________________________________________

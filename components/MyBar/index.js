@@ -20,6 +20,7 @@ const MyBar = (props) => {
 
   return (
     <View style={styles.container}>
+
       <TextInput
         style={styles.search}
         onChangeText={handleChange}
@@ -42,6 +43,7 @@ const MyBar = (props) => {
           </View>
         );
       })}
+      
     </View>
   );
 };
