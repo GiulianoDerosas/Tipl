@@ -32,8 +32,8 @@ const Blog = () => {
                 {backgroundColor: '#232324', borderRadius: 16}
               ]}
               />
-              <Text>{item.title}</Text>
-              <Text>{item.blurb}</Text>
+              <Text style={styles.title}>{item.title}</Text>
+              <Text style={styles.blurb}>{item.blurb}</Text>
             </View>
 
             </TouchableOpacity>

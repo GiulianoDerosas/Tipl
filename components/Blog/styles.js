@@ -9,8 +9,15 @@ const styles = StyleSheet.create({
     height: Dimensions.get('window').height * 0.8,
     width: Dimensions.get('window').width,
   },
-  text: {
+  title: {
+    fontWeight: '700',
+    fontSize: 22,
     color: '#fff'
+  },
+  blurb: {
+    fontSize: 14,
+    color: '#fff',
+    opacity: 0.7
   }
 });
 

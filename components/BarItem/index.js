@@ -6,18 +6,16 @@ const BarItem = (props) => {
   const [isSelected, setSelection] = useState(false);
 
   const { name, key } = props.ingredient;
+  // const { addToUsersIngredients } = props.addToUsersIngredients
 
-  const ownedIngredients = [];
+  // const ownedIngredients = [];
 
   const handleChange = () => {
     setSelection(!isSelected);
-    if (isSelected === true) {
-      ownedIngredients.push(key);
-      console.log(ownedIngredients);
+    if (isSelected === false) {
+      props.addToUsersIngredients(key)
     } else {
-      let index = ownedIngredients.indexOf(key);
-      ownedIngredients.splice(index, 1);
-      console.log(ownedIngredients);
+      props.removeFromUsersIngredients(key)
     }
 
   };
