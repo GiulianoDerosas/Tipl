@@ -1,4 +1,4 @@
-export default [
+const cocktails = [
     {
     key: "1",
     name: 'Whisky Sour',
@@ -31,3 +31,5 @@ export default [
     ingredients: ["rum", "lime", "sugar", "soda"],
   }
 ];
+
+export default cocktails;

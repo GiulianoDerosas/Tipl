@@ -20,7 +20,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#232324',
     borderRadius: 18,
     marginBottom: 20
-  }, list: {
+  }, 
+  toggle: {
+    marginBottom: 200,
+    width:30,
+    backgroundColor: '#232324',
+    marginLeft: 20,
+    marginRight: 20,
+    borderRadius: 18,
   }
 });
 

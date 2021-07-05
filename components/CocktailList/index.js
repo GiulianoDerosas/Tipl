@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, FlatList, Dimensions, TextInput} from 'react-native';
+import {View, FlatList, Dimensions, TextInput, Switch, Button} from 'react-native';
 import { useState } from "react/cjs/react.development";
 import CocktailItem from "../CocktailItem";
 
@@ -9,6 +9,7 @@ import cocktails from './cocktails';
 
 const CocktailList = (props) => {
   const [search, setSearch] = useState("");
+  const [ownedIngredients, setOwnedIngredients]= useState([])
 
   const handleChange = (text) => {
     setSearch(text);
@@ -17,6 +18,26 @@ const CocktailList = (props) => {
   const filteredCocktails = cocktails.filter((cocktail) =>
     cocktail.name.toLowerCase().includes(search.toLowerCase())
   );
+
+
+  // ___________________________________________________________________________________________________
+  // Filter drinks on toggle
+  // ___________________________________________________________________________________________________
+
+//   const filteredCocktailsToggle = cocktails.filter((cocktail) =>
+//   cocktail.ingredients.map().toLowerCase().includes(ownedIngredients.map().toLowerCase())
+// );
+
+// const handleToggle = () => {
+//   !isOn
+//   if (isOn === true) {
+//   setOwnedIngredients(ownedIngredients)}
+//   else {
+//     setOwnedIngredients([])
+//   }
+// };
+  // ___________________________________________________________________________________________________
+
 
   return (
     <View style={styles.container}>
@@ -41,7 +62,15 @@ const CocktailList = (props) => {
           snapToInterval={Dimensions.get('window').height}
         />
         </View>
-        
+
+{/* 
+        <View style={styles.toggle}>
+        <Switch
+          title="My Drinks"
+          isOn = {false}
+          onValueChange={handleToggle}
+        />
+        </View> */}
 
     </View>
   );

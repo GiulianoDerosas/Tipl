@@ -28,10 +28,22 @@ const images = [
 ];
 
 // const masterdata = cocktails.map((cocktail) => {
-//   cocktail.image.map((imageURI) => ({
+//   cocktail.image.map((imageURI, index) => ({
+//   key: String(index + 1),
 //   photo: imageURI
 //   }));
 // })
+
+const newData = cocktails.map((item => {
+  return item.image
+}))
+
+const masterdata = newData.forEach((cocktail) => {
+  cocktail.map((image, index) => ({
+    key: String(index + 1),
+    photo: image,
+  }))
+})
 
   // ___________________________________________________________________________________________________
   // Need help rendering a specific image for a cocktail item.
@@ -42,6 +54,11 @@ const data = images.map((image, index) => ({
   key: String(index + 1),
   photo: image,
 }));
+
+console.log(data)
+console.log(newData)
+console.log(masterdata)
+
 
 export default function CocktailItem(props) {
   const { image, name, ingredients } = props.cocktail;

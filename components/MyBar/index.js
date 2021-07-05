@@ -1,5 +1,5 @@
 import React from "react";
-import { View, FlatList, Checkbox, ListItem, Dimensions } from "react-native";
+import { View, FlatList, Checkbox, ListItem, Dimensions, SafeAreaView } from "react-native";
 import styles from "./styles";
 import BarItem from "../BarItem/index";
 import ingredients from "../BarItem/ingredients";
@@ -20,7 +20,7 @@ const MyBar = (props) => {
 
   return (
     <View style={styles.container}>
-
+    
       <TextInput
         style={styles.search}
         onChangeText={handleChange}
@@ -30,9 +30,8 @@ const MyBar = (props) => {
         textAlign="center"
       />
 
-      {filteredIngredients.map((ingredient) => {
-        return (
-          <View style={{ marginTop: 20 }}>
+
+          <View style={styles.list}>
             <FlatList
               data={filteredIngredients.sort((a, b) =>
                 a.key.localeCompare(b.key)
@@ -41,9 +40,8 @@ const MyBar = (props) => {
               renderItem={({ item }) => <BarItem ingredient={item} />}
             />
           </View>
-        );
-      })}
-      
+
+
     </View>
   );
 };

@@ -19,6 +19,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     backgroundColor: '#232324',
     borderRadius: 18,
+  },
+  list: {
+    marginTop: 20,
+    height: Dimensions.get('window').height * 0.67
   }
 });
 

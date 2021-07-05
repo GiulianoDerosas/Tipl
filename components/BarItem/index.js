@@ -1,26 +1,26 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { View, Switch, Text, Alert } from "react-native";
 import styles from "./styles";
-
 
 const BarItem = (props) => {
   const [isSelected, setSelection] = useState(false);
 
-  const {name, key} = props.ingredient
+  const { name, key } = props.ingredient;
 
-  const ownedIngredients = []
+  const ownedIngredients = [];
 
   const handleChange = () => {
     setSelection(!isSelected);
     if (isSelected === true) {
-      ownedIngredients.push(key)
+      ownedIngredients.push(key);
       console.log(key);
       console.log(ownedIngredients);
     } else {
       let index = ownedIngredients.indexOf(key);
-      ownedIngredients.splice(index , 1)
+      ownedIngredients.splice(index, 1);
       console.log(ownedIngredients);
     }
+    console.log(ownedIngredients);
   };
 
   // ___________________________________________________________________________________________________
@@ -35,13 +35,12 @@ const BarItem = (props) => {
           value={isSelected}
           onValueChange={handleChange}
           style={styles.checkbox}
-          trackColor={{ true: '#6ccef2', false: '#ffa68b' }}
+          trackColor={{ true: "#6ccef2", false: "#ffa68b" }}
           ios_backgroundColor="#ffa68b"
         />
       </View>
     </View>
   );
 };
-
 
 export default BarItem;
