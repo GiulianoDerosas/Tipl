@@ -6,9 +6,7 @@ const BarItem = (props) => {
   const [isSelected, setSelection] = useState(false);
 
   const { name, key } = props.ingredient;
-  // const { addToUsersIngredients } = props.addToUsersIngredients
 
-  // const ownedIngredients = [];
 
   const handleChange = () => {
     setSelection(!isSelected);
@@ -17,7 +15,6 @@ const BarItem = (props) => {
     } else {
       props.removeFromUsersIngredients(key)
     }
-
   };
 
   // ___________________________________________________________________________________________________
