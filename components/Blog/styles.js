@@ -1,28 +1,16 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     flex: 1,
-    width: '100%',
-    height: '100%'
+    backgroundColor: '#121212',
+    justifyContent: 'center',
+    height: Dimensions.get('window').height * 0.8,
+    width: Dimensions.get('window').width,
   },
-  titles: {
-    marginTop: '30%',
-    width: '100%',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 40,
-    fontWeight: '500',
-    color: '#fff',
-    position: 'absolute',
-    top: 60
-  },
-  button: {
-    alignSelf: 'flex-end',
-    position: 'absolute',
-    bottom: 40
+  text: {
+    color: '#fff'
   }
 });
 

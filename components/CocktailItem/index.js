@@ -1,13 +1,10 @@
 import * as React from "react";
 import styles from "./styles";
 import {
-  Animated,
   Dimensions,
   Image,
   FlatList,
-  Text,
   View,
-  StyleSheet,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import cocktails from "../CocktailList/cocktails";
