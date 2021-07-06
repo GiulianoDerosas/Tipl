@@ -1,10 +1,12 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import CocktailList from '../components/CocktailList'
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { Text, View, Image} from 'react-native';
 import Home from '../components/HomeScreen'
 import MyBar from '../components/MyBar'
 import Blog from '../components/Blog'
 import React from 'react';
+
+
 
 const Tab = createBottomTabNavigator();
 
@@ -114,9 +116,32 @@ const Tabs = () => {
                 )
             }}
             />
+
+
+            {/* <Tab.Screen
+            name="Guide Details"
+            component={GuideDetails}
+            options={{
+                tabBarIcon: ({focused}) => (
+                    <View style={{alignItems: 'center', justifyContent: 'center', top: 15}}>
+                        <Image
+                        source={require('../assets/icons/mybar.png')}
+                        resizeMode="contain"
+                        style={{
+                            width: 35,
+                            height: 35,
+                            tintColor: focused ? '#6ccef2' : '#ffa68b'
+                        }}
+                        />
+                        <Text style={{fontSize: 12, color: focused ? '#6ccef2' : '#ffa68b'}}>
+                            My Guide
+                        </Text>
+                    </View>
+                )
+            }}
+            /> */}
         </Tab.Navigator>
     )
 }
 
 export default Tabs;
-

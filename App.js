@@ -6,10 +6,15 @@ import Tabs from './navigation/tabs'
 import Header from './components/Header';
 
 
+
+
+
+
 export default function App() {
+
   return (
     <NavigationContainer>
-      <Header></Header>
+      <Header />
       <Tabs />
     </NavigationContainer>
   );

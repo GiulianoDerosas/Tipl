@@ -15,13 +15,13 @@ const ITEM_WIDTH = width * 0.76;
 const ITEM_HEIGHT = ITEM_WIDTH * 1.47;
 
 const images = [
-  "https://i.ibb.co/qk31sHs/lolol.png",
-  "https://i.ibb.co/687PhLX/lelele.png",
-  "https://i.ibb.co/3NdDpnw/Mojito.png",
-  "https://i.ibb.co/6wTJgPy/Negroni.png",
-  "https://i.ibb.co/fNDrNs9/Old-Fashioned.png",
-  "https://i.ibb.co/v1n5WH6/Daiquiri.png",
-  "https://i.ibb.co/XY0yxx7/PrepMock.png",
+  // "https://i.ibb.co/qk31sHs/lolol.png",
+  // "https://i.ibb.co/687PhLX/lelele.png",
+  // "https://i.ibb.co/3NdDpnw/Mojito.png",
+  // "https://i.ibb.co/6wTJgPy/Negroni.png",
+  // "https://i.ibb.co/fNDrNs9/Old-Fashioned.png",
+  // "https://i.ibb.co/v1n5WH6/Daiquiri.png",
+  // "https://i.ibb.co/XY0yxx7/PrepMock.png",
 ];
 
 // const masterdata = cocktails.map((cocktail) => {
@@ -31,34 +31,13 @@ const images = [
 //   }));
 // })
 
-const newData = cocktails.map((item => {
-  return item.image
-}))
-
-const masterdata = newData.forEach((cocktail) => {
-  cocktail.map((image, index) => ({
-    key: String(index + 1),
-    photo: image,
-  }))
-})
-
-  // ___________________________________________________________________________________________________
-  // Need help rendering a specific image for a cocktail item.
-  // ___________________________________________________________________________________________________
-
-
-const data = images.map((image, index) => ({
-  key: String(index + 1),
-  photo: image,
-}));
-
-console.log(data)
-console.log(newData)
-console.log(masterdata)
-
-
 export default function CocktailItem(props) {
   const { image, name, ingredients } = props.cocktail;
+
+  const data = image.map((image, index) => ({
+    key: String(index + 1),
+    photo: image,
+  }));
 
   return (
     <View style={styles.container}>
@@ -105,7 +84,8 @@ export default function CocktailItem(props) {
                   }}
                 >
                   <Image
-                    source={{uri: item.photo}}
+                    source={{uri: item.photo
+                    }}
                     style={{
                       width: ITEM_WIDTH * 1.4,
                       height: ITEM_HEIGHT * 1.2,

@@ -2,10 +2,7 @@ import React from "react";
 import {
   View,
   FlatList,
-  Checkbox,
-  ListItem,
   Dimensions,
-  SafeAreaView,
 } from "react-native";
 import styles from "./styles";
 import BarItem from "../BarItem/index";
@@ -16,21 +13,21 @@ const { width, height } = Dimensions.get("screen");
 
 const MyBar = (props) => {
   const [search, setSearch] = useState("");
-
-  const usersIngredients = [];
+  const [usersIngredients, setUsersIngredients] = useState([]);
 
   const handleChange = (text) => {
     setSearch(text);
   };
 
   const addToUsersIngredients = (key) => {
-    usersIngredients.push(key);
+    setUsersIngredients([...usersIngredients, key]);
     console.log(usersIngredients);
   };
 
+
   const removeFromUsersIngredients = (key) => {
     let index = usersIngredients.indexOf(key);
-    usersIngredients.splice(index, 1);
+    setUsersIngredients([...usersIngredients.slice(0, index), ...usersIngredients.slice(index + 1)]);
     console.log(usersIngredients);
   };
 
@@ -60,6 +57,7 @@ const MyBar = (props) => {
               ingredient={item}
               addToUsersIngredients={addToUsersIngredients}
               removeFromUsersIngredients={removeFromUsersIngredients}
+              usersIngredients={usersIngredients}
             />
           )}
         />

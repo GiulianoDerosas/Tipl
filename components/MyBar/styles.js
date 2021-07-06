@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   list: {
     marginTop: 20,
-    height: Dimensions.get('window').height * 0.67
+    height: Dimensions.get('window').height * 0.67,
   }
 });
 

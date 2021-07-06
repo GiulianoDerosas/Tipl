@@ -485,6 +485,12 @@ const ingredients = [
     name: "Worcestershire Sauce",
     // checked: false,
   },
+  {
+    id: "82",
+    key: "sweetvermouth",
+    name: "Sweet Vermouth",
+    // checked: false,
+  },
 ];
 
 export default ingredients;

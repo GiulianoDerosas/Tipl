@@ -1,21 +1,24 @@
 import React, { useState } from "react";
-import { View, Switch, Text, Alert } from "react-native";
+import { View, Switch, Text, Alert, RefreshControl,  } from "react-native";
 import styles from "./styles";
 
+
 const BarItem = (props) => {
-  const [isSelected, setSelection] = useState(false);
 
   const { name, key } = props.ingredient;
 
+  const isSelected = () => {
+    return props.usersIngredients.includes(key)
+  }
 
   const handleChange = () => {
-    setSelection(!isSelected);
-    if (isSelected === false) {
+    if (isSelected() === false) {
       props.addToUsersIngredients(key)
     } else {
       props.removeFromUsersIngredients(key)
     }
   };
+
 
   // ___________________________________________________________________________________________________
   // Need help pushing toggled items to the array, and removing un-toggled items.
@@ -26,7 +29,7 @@ const BarItem = (props) => {
       <View style={styles.checkboxContainer}>
         <Text style={styles.label}>{name}</Text>
         <Switch
-          value={isSelected}
+          value={isSelected()}
           onValueChange={handleChange}
           style={styles.checkbox}
           trackColor={{ true: "#6ccef2", false: "#ffa68b" }}
