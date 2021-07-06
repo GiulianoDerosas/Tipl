@@ -29,28 +29,6 @@ const Tabs = () => {
                 height: 70,
             }
         }}>
-            <Tab.Screen
-            name="Guides"
-            component={Blog}
-            options={{
-                tabBarIcon: ({focused}) => (
-                    <View style={{alignItems: 'center', justifyContent: 'center', top: 15}}>
-                        <Image
-                        source={require('../assets/icons/guides.png')}
-                        resizeMode="contain"
-                        style={{
-                            width: 35,
-                            height: 35,
-                            tintColor: focused ? '#6ccef2' : '#ffa68b'
-                        }}
-                        />
-                        <Text style={{fontSize: 12, color: focused ? '#6ccef2' : '#ffa68b'}}>
-                            GUIDES
-                        </Text>
-                    </View>
-                )
-            }}
-            />
 
             <Tab.Screen 
             name="Home" 
@@ -73,6 +51,29 @@ const Tabs = () => {
                     </View>
                 )
             }}/>
+            
+            <Tab.Screen
+            name="Guides"
+            component={Blog}
+            options={{
+                tabBarIcon: ({focused}) => (
+                    <View style={{alignItems: 'center', justifyContent: 'center', top: 15}}>
+                        <Image
+                        source={require('../assets/icons/guides.png')}
+                        resizeMode="contain"
+                        style={{
+                            width: 35,
+                            height: 35,
+                            tintColor: focused ? '#6ccef2' : '#ffa68b'
+                        }}
+                        />
+                        <Text style={{fontSize: 12, color: focused ? '#6ccef2' : '#ffa68b'}}>
+                            GUIDES
+                        </Text>
+                    </View>
+                )
+            }}
+            />
 
             <Tab.Screen 
             name="Drinks List" 
@@ -120,29 +121,6 @@ const Tabs = () => {
             }}
             />
 
-
-            {/* <Tab.Screen
-            name="Guide Details"
-            component={GuideDetails}
-            options={{
-                tabBarIcon: ({focused}) => (
-                    <View style={{alignItems: 'center', justifyContent: 'center', top: 15}}>
-                        <Image
-                        source={require('../assets/icons/mybar.png')}
-                        resizeMode="contain"
-                        style={{
-                            width: 35,
-                            height: 35,
-                            tintColor: focused ? '#6ccef2' : '#ffa68b'
-                        }}
-                        />
-                        <Text style={{fontSize: 12, color: focused ? '#6ccef2' : '#ffa68b'}}>
-                            My Guide
-                        </Text>
-                    </View>
-                )
-            }}
-            /> */}
         </Tab.Navigator>
     )
 }

@@ -35,8 +35,9 @@ const CocktailList = (props) => {
 
   const filteredCocktails2 = cocktails.filter((cocktail) =>
     cocktail.ingredients.every((ingredient) => props.usersIngredients.includes(ingredient)
-    )
-  )
+    )).filter((cocktail) =>
+    cocktail.name.toLowerCase().includes(search.toLowerCase())
+  );
 
   const ShowDrinksThatCanBeMade = () => {
     setToggle(!toggle);
