@@ -1,24 +1,17 @@
 import * as React from "react";
 import styles from "./styles";
-import {
-  Dimensions,
-  Image,
-  FlatList,
-  View,
-} from "react-native";
+import { Dimensions, Image, FlatList, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 const { width, height } = Dimensions.get("screen");
 const ITEM_WIDTH = width * 0.76;
 const ITEM_HEIGHT = ITEM_WIDTH * 1.47;
 
-
 export default function CocktailItem(props) {
   const { image, name, ingredients } = props.cocktail;
 
-
-// This function maps each cocktails item to retrieve the associated images.
-// ___________________________________________________________________________________________________________
+  // This function maps each cocktails item to retrieve the associated images.
+  // ___________________________________________________________________________________________________________
   const data = image.map((image, index) => ({
     key: String(index + 1),
     photo: image,
@@ -29,9 +22,8 @@ export default function CocktailItem(props) {
     ingredient: ingredient,
   }));
 
-// ___________________________________________________________________________________________________________
-// ___________________________________________________________________________________________________________
-
+  // ___________________________________________________________________________________________________________
+  // ___________________________________________________________________________________________________________
 
   return (
     <View style={styles.container}>
@@ -78,10 +70,9 @@ export default function CocktailItem(props) {
                   }}
                 >
                   <Image
-                    source={{uri: item.photo
-                    }}
+                    source={{ uri: item.photo }}
                     style={{
-                      width: ITEM_WIDTH * 1.4,
+                      width: ITEM_WIDTH * 1.2,
                       height: ITEM_HEIGHT * 1.2,
                       resizeMode: "cover",
                     }}
