@@ -24,6 +24,10 @@ export default function CocktailItem(props) {
     photo: image,
   }));
 
+  const ingredientData = ingredients.map((ingredient, index) => ({
+    key: String(index + 1),
+    ingredient: ingredient,
+  }));
 
 // ___________________________________________________________________________________________________________
 // ___________________________________________________________________________________________________________

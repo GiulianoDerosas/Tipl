@@ -1,6 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import CocktailList from '../components/CocktailList'
 import { Text, View, Image} from 'react-native';
+import { useState } from "react/cjs/react.development";
 import Home from '../components/HomeScreen'
 import MyBar from '../components/MyBar'
 import Blog from '../components/Blog'
@@ -11,6 +12,8 @@ import React from 'react';
 const Tab = createBottomTabNavigator();
 
 const Tabs = () => {
+    const [usersIngredients, setUsersIngredients] = useState([]);
+
     return(
         <Tab.Navigator
         tabBarOptions={{
@@ -73,7 +76,7 @@ const Tabs = () => {
 
             <Tab.Screen 
             name="Drinks List" 
-            component={CocktailList}
+            children={()=><CocktailList usersIngredients={usersIngredients}/>}
             options={{
                 tabBarIcon: ({focused}) => (
                     <View style={{alignItems: 'center', justifyContent: 'center', top: 15}}>
@@ -96,7 +99,7 @@ const Tabs = () => {
 
             <Tab.Screen
             name="My Bar"
-            component={MyBar}
+            children={()=><MyBar usersIngredients={usersIngredients} setUsersIngredients={setUsersIngredients}/>}
             options={{
                 tabBarIcon: ({focused}) => (
                     <View style={{alignItems: 'center', justifyContent: 'center', top: 15}}>

@@ -3,9 +3,8 @@ import {
   View,
   FlatList,
   Dimensions,
-  Alert,
   TouchableOpacity,
-  Image
+  Image,
 } from "react-native";
 import styles from "./styles";
 import BarItem from "../BarItem/index";
@@ -14,10 +13,10 @@ import { useState } from "react/cjs/react.development";
 import { TextInput } from "react-native-gesture-handler";
 const { width, height } = Dimensions.get("screen");
 
-const MyBar = (props) => {
+const MyBar = ({usersIngredients, setUsersIngredients}) => {
   const [search, setSearch] = useState("");
-  const [usersIngredients, setUsersIngredients] = useState([]);
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
+
 
   const handleChange = (text) => {
     setSearch(text);
@@ -30,15 +29,16 @@ const MyBar = (props) => {
     console.log(usersIngredients);
   };
 
-
   // This function will remove everything before and after the index in order to remove a specific value.
   // ___________________________________________________________________________________________________________
   const removeFromUsersIngredients = (key) => {
     let index = usersIngredients.indexOf(key);
-    setUsersIngredients([...usersIngredients.slice(0, index), ...usersIngredients.slice(index + 1)]);
+    setUsersIngredients([
+      ...usersIngredients.slice(0, index),
+      ...usersIngredients.slice(index + 1),
+    ]);
     console.log(usersIngredients);
   };
-
 
   // This function will change the displayed ingredients to only ones searched for by name.
   // ___________________________________________________________________________________________________________
@@ -46,40 +46,37 @@ const MyBar = (props) => {
     ingredient.key.includes(search.toLowerCase())
   );
 
-
-  // This function will only display ingredients owned by the user.
+  // These function will only display ingredients owned by the user by changing the data provided to the flatlist.
   // ___________________________________________________________________________________________________________
-
   const filteredIngredients2 = ingredients.filter((ingredient) =>
-    (usersIngredients.includes(ingredient.key))
+    usersIngredients.includes(ingredient.key)
   );
 
-  const ShowIngredientsOwned=()=>{
-    Alert.alert("Show Ingredients Owned");
-    setToggle(!toggle)
-    console.log('====================================');
-    console.log(toggle);
-    console.log('====================================');
-  }
-
+  const ShowIngredientsOwned = () => {
+    setToggle(!toggle);
+  };
 
   // ___________________________________________________________________________________________________________
   // ___________________________________________________________________________________________________________
 
-  
   return (
     <View style={styles.container}>
-
-      <View style={styles.button}>    
-          <TouchableOpacity activeOpacity={0.5} onPress={ShowIngredientsOwned} style={styles.TouchableOpacityStyle} >
-          <Image source={{uri : 'https://i.ibb.co/gPsRk1L/4526592.jpg'}} 
-            style={{resizeMode: 'contain',
-                  width: 60,
-                  height: 60,
-                  borderRadius: 50,
-                  }}
-            />
-          </TouchableOpacity>
+      <View style={styles.button}>
+        <TouchableOpacity
+          activeOpacity={0.5}
+          onPress={ShowIngredientsOwned}
+          style={styles.TouchableOpacityStyle}
+        >
+          <Image
+            source={{ uri: "https://i.ibb.co/gPsRk1L/4526592.jpg" }}
+            style={{
+              resizeMode: "contain",
+              width: 60,
+              height: 60,
+              borderRadius: 50,
+            }}
+          />
+        </TouchableOpacity>
       </View>
 
       <TextInput
@@ -93,8 +90,11 @@ const MyBar = (props) => {
 
       <View style={styles.list}>
         <FlatList
-          data={toggle ? filteredIngredients.sort((a, b) => a.key.localeCompare(b.key)) :
-          filteredIngredients2.sort((a, b) => a.key.localeCompare(b.key))}
+          data={
+            toggle
+              ? filteredIngredients.sort((a, b) => a.key.localeCompare(b.key))
+              : filteredIngredients2.sort((a, b) => a.key.localeCompare(b.key))
+          }
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <BarItem
@@ -106,7 +106,6 @@ const MyBar = (props) => {
           )}
         />
       </View>
-
     </View>
   );
 };
