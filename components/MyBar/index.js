@@ -17,6 +17,7 @@ const { width, height } = Dimensions.get("screen");
 const MyBar = (props) => {
   const [search, setSearch] = useState("");
   const [usersIngredients, setUsersIngredients] = useState([]);
+  const [toggle, setToggle] = useState(false);
 
   const handleChange = (text) => {
     setSearch(text);
@@ -45,8 +46,20 @@ const MyBar = (props) => {
     ingredient.key.includes(search.toLowerCase())
   );
 
-  const SampleFunction=()=>{
-    Alert.alert("Floating Button Clicked");
+
+  // This function will only display ingredients owned by the user.
+  // ___________________________________________________________________________________________________________
+
+  const filteredIngredients2 = ingredients.filter((ingredient) =>
+    (usersIngredients.includes(ingredient.key))
+  );
+
+  const ShowIngredientsOwned=()=>{
+    Alert.alert("Show Ingredients Owned");
+    setToggle(!toggle)
+    console.log('====================================');
+    console.log(toggle);
+    console.log('====================================');
   }
 
 
@@ -58,7 +71,7 @@ const MyBar = (props) => {
     <View style={styles.container}>
 
       <View style={styles.button}>    
-          <TouchableOpacity activeOpacity={0.5} onPress={SampleFunction} style={styles.TouchableOpacityStyle} >
+          <TouchableOpacity activeOpacity={0.5} onPress={ShowIngredientsOwned} style={styles.TouchableOpacityStyle} >
           <Image source={{uri : 'https://i.ibb.co/gPsRk1L/4526592.jpg'}} 
             style={{resizeMode: 'contain',
                   width: 60,
@@ -80,7 +93,8 @@ const MyBar = (props) => {
 
       <View style={styles.list}>
         <FlatList
-          data={filteredIngredients.sort((a, b) => a.key.localeCompare(b.key))}
+          data={toggle ? filteredIngredients.sort((a, b) => a.key.localeCompare(b.key)) :
+          filteredIngredients2.sort((a, b) => a.key.localeCompare(b.key))}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <BarItem

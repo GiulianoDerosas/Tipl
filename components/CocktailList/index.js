@@ -15,7 +15,7 @@ import styles from './styles';
 import cocktails from './cocktails';
 
 
-const SampleFunction=()=>{
+const ShowDrinksThatCanBeMade=()=>{
   Alert.alert("Floating Button Clicked");
 }
 
@@ -66,7 +66,7 @@ const CocktailList = (props) => {
         </View>
 
           <View>    
-          <TouchableOpacity activeOpacity={0.5} onPress={SampleFunction} style={styles.TouchableOpacityStyle} >
+          <TouchableOpacity activeOpacity={0.5} onPress={ShowDrinksThatCanBeMade} style={styles.TouchableOpacityStyle} >
           <Image source={{uri : 'https://i.ibb.co/gPsRk1L/4526592.jpg'}} 
             style={{resizeMode: 'contain',
                   width: 60,
