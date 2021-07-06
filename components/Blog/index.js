@@ -15,6 +15,7 @@ const Blog = ({ navigation }) => {
   const data = guide.map((item, index) => ({
     title: item.title,
     blurb: item.blurb,
+    navigationRoute: item.navigationRoute
   }));
 
   const ITEM_HEIGHT = Dimensions.get("window").height * 0.18;
@@ -30,7 +31,7 @@ const Blog = ({ navigation }) => {
             return (
               <TouchableOpacity
                 onPress={() => {
-                  navigation.navigate("GuideDetails");
+                  navigation.navigate((item.navigationRoute));
                 }}
                 style={{ marginBottom: 20, height: ITEM_HEIGHT }}
               >

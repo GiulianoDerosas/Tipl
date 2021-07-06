@@ -1,42 +1,44 @@
 import React from 'react';
-import {View, FlatList, Dimensions, TextInput, Switch, Button} from 'react-native';
+import {
+  View,
+  FlatList,
+  Dimensions,
+  TextInput,
+  TouchableOpacity,
+  Image,
+  StyleSheet,
+  Alert
+} from 'react-native';
 import { useState } from "react/cjs/react.development";
 import CocktailItem from "../CocktailItem";
-
 import styles from './styles';
 import cocktails from './cocktails';
 
 
+const SampleFunction=()=>{
+  Alert.alert("Floating Button Clicked");
+}
+
 const CocktailList = (props) => {
   const [search, setSearch] = useState("");
-  const [ownedIngredients, setOwnedIngredients]= useState([])
 
+
+// This function sets the search value.
+// ___________________________________________________________________________________________________________
   const handleChange = (text) => {
     setSearch(text);
   };
 
+
+// This function filters for cocktails that have been searched for by name.
+// ___________________________________________________________________________________________________________
   const filteredCocktails = cocktails.filter((cocktail) =>
     cocktail.name.toLowerCase().includes(search.toLowerCase())
   );
 
 
-  // ___________________________________________________________________________________________________
-  // Filter drinks on toggle
-  // ___________________________________________________________________________________________________
-
-//   const filteredCocktailsToggle = cocktails.filter((cocktail) =>
-//   cocktail.ingredients.map().toLowerCase().includes(ownedIngredients.map().toLowerCase())
-// );
-
-// const handleToggle = () => {
-//   !isOn
-//   if (isOn === true) {
-//   setOwnedIngredients(ownedIngredients)}
-//   else {
-//     setOwnedIngredients([])
-//   }
-// };
-  // ___________________________________________________________________________________________________
+// ___________________________________________________________________________________________________________
+// ___________________________________________________________________________________________________________
 
 
   return (
@@ -63,14 +65,19 @@ const CocktailList = (props) => {
         />
         </View>
 
-{/* 
-        <View style={styles.toggle}>
-        <Switch
-          title="My Drinks"
-          isOn = {false}
-          onValueChange={handleToggle}
-        />
-        </View> */}
+          <View>    
+          <TouchableOpacity activeOpacity={0.5} onPress={SampleFunction} style={styles.TouchableOpacityStyle} >
+          <Image source={{uri : 'https://i.ibb.co/gPsRk1L/4526592.jpg'}} 
+            style={{resizeMode: 'contain',
+                  width: 60,
+                  height: 60,
+                  borderRadius: 50,
+                  }}
+            />
+          </TouchableOpacity>
+          </View>
+        
+
 
     </View>
   );

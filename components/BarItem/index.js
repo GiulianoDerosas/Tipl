@@ -7,10 +7,16 @@ const BarItem = (props) => {
 
   const { name, key } = props.ingredient;
 
+
+// This function returns true or false based on whether the user owns an ingredient or not.
+// ___________________________________________________________________________________________________________
   const isSelected = () => {
     return props.usersIngredients.includes(key)
   }
 
+
+// This function will call the isSelected function and calls the required function from MyBar.
+// ___________________________________________________________________________________________________________
   const handleChange = () => {
     if (isSelected() === false) {
       props.addToUsersIngredients(key)
@@ -20,9 +26,9 @@ const BarItem = (props) => {
   };
 
 
-  // ___________________________________________________________________________________________________
-  // Need help pushing toggled items to the array, and removing un-toggled items.
-  // ___________________________________________________________________________________________________
+// ___________________________________________________________________________________________________________
+// ___________________________________________________________________________________________________________
+
 
   return (
     <View>

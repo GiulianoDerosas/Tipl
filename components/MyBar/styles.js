@@ -23,6 +23,22 @@ const styles = StyleSheet.create({
   list: {
     marginTop: 20,
     height: Dimensions.get('window').height * 0.67,
+  },
+  TouchableOpacityStyle:{
+    position: 'absolute',
+    width: 50,
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    right: 108,
+    bottom: 0,
+  },
+  button: {
+    position: 'absolute',
+    width: Dimensions.get('window').width * 0.8,
+    height: Dimensions.get('window').height * 0,
+    marginTop: 130,
+    marginBottom: 0
   }
 });
 

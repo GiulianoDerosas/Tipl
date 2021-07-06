@@ -28,7 +28,16 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginRight: 20,
     borderRadius: 18,
-  }
+  },
+  TouchableOpacityStyle:{
+    position: 'absolute',
+    width: 50,
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    right: 194,
+    bottom: 796,
+  },
 });
 
 export default styles;

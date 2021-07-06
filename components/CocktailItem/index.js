@@ -7,37 +7,27 @@ import {
   View,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import cocktails from "../CocktailList/cocktails";
-// ___________________________________________________________________________________
 
 const { width, height } = Dimensions.get("screen");
 const ITEM_WIDTH = width * 0.76;
 const ITEM_HEIGHT = ITEM_WIDTH * 1.47;
 
-const images = [
-  // "https://i.ibb.co/qk31sHs/lolol.png",
-  // "https://i.ibb.co/687PhLX/lelele.png",
-  // "https://i.ibb.co/3NdDpnw/Mojito.png",
-  // "https://i.ibb.co/6wTJgPy/Negroni.png",
-  // "https://i.ibb.co/fNDrNs9/Old-Fashioned.png",
-  // "https://i.ibb.co/v1n5WH6/Daiquiri.png",
-  // "https://i.ibb.co/XY0yxx7/PrepMock.png",
-];
-
-// const masterdata = cocktails.map((cocktail) => {
-//   cocktail.image.map((imageURI, index) => ({
-//   key: String(index + 1),
-//   photo: imageURI
-//   }));
-// })
 
 export default function CocktailItem(props) {
   const { image, name, ingredients } = props.cocktail;
 
+
+// This function maps each cocktails item to retrieve the associated images.
+// ___________________________________________________________________________________________________________
   const data = image.map((image, index) => ({
     key: String(index + 1),
     photo: image,
   }));
+
+
+// ___________________________________________________________________________________________________________
+// ___________________________________________________________________________________________________________
+
 
   return (
     <View style={styles.container}>
@@ -101,5 +91,3 @@ export default function CocktailItem(props) {
     </View>
   );
 }
-
-// ___________________________________________________________________________________
