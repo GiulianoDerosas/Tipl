@@ -11,13 +11,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   logo: {
-    width: 60,
-    height: 60,
+    width: 70,
+    height: 70,
     resizeMode: 'contain',
   },
   menu: {
-    width: 45,
-    height: 45,
+    width: 55,
+    height: 55,
     resizeMode: 'contain',
   }
 });

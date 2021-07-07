@@ -7,11 +7,9 @@ import MyBar from '../components/MyBar'
 import Blog from '../components/Blog'
 import React from 'react';
 
-
-
-const Tab = createBottomTabNavigator();
-
-const Tabs = () => {
+ const Tab = createBottomTabNavigator();
+  
+ export const Tabs = () => {
     const [usersIngredients, setUsersIngredients] = useState([]);
 
     return(

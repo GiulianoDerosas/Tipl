@@ -14,7 +14,7 @@ const ingredients = [
   {
     id: "3",
     key: "sugar",
-    name: "Sugar",
+    name: "Sugar Syrup",
     // checked: false,
   },
   {
