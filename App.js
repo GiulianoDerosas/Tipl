@@ -22,8 +22,8 @@ return (
     headerShown: false
   }}
   >
-   <GuideStack.Screen name="Blog" component={Blog} />
-   <GuideStack.Screen name="Stir" component={Stir} />
+   <GuideStack.Screen name="Blog" component={Blog}  />
+   <GuideStack.Screen name="Stir" component={Stir}  />
 
   </GuideStack.Navigator>
  );}

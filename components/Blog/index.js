@@ -36,7 +36,7 @@ const Blog = ({ navigation }) => {
               <TouchableOpacity
                 onPress={() => {
                   console.log(item.navigationRoute)
-                  navigation.navigate((item.navigationRoute), {item});
+                  navigation.navigate((item.navigationRoute));
                 }}
                 style={{ marginBottom: 20, height: ITEM_HEIGHT }}
               >

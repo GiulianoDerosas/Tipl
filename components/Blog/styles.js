@@ -20,14 +20,48 @@ const styles = StyleSheet.create({
     opacity: 0.7
   },
   image: {
-    width: Dimensions.get('window').height * 0.8,
-    height: Dimensions.get('window').height * 0.8,
     resizeMode: 'contain',
     position: 'absolute',
     bottom: 0,
     right: 20,
     tintColor: 'white'
-  }
+  },
+  text: {
+    color: 'white',
+    fontSize: 16,
+    marginHorizontal: 40,
+    textAlign: 'center',
+    marginTop: 60
+  },
+  title2: {
+    fontSize: 40,
+    fontWeight: '500',
+    color: '#fff',
+    position: 'absolute',
+    alignSelf: 'center',
+    marginTop: 0
+  },
+  containerText: {
+    marginTop: 140,
+    marginBottom: 110
+  },
+  sectionHeader: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    backgroundColor: '#232323',
+    alignSelf: 'center',
+    color: '#fff',
+    marginTop: 10
+  },
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44,
+    alignSelf: 'center',
+    color: '#fff',
+    marginHorizontal: 40,
+    flexWrap: 'wrap'
+  },
 });
 
 export default styles;
