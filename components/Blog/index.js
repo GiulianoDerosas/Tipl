@@ -7,12 +7,14 @@ import {
   TouchableOpacity,
   StyleSheet,
   Dimensions,
-  Image
+  Image,
+  Button
 } from "react-native";
 import styles from "./styles";
 import guide from "./guide";
 
 const Blog = ({ navigation }) => {
+
   const data = guide.map((item, index) => ({
     title: item.title,
     blurb: item.blurb,
@@ -33,6 +35,7 @@ const Blog = ({ navigation }) => {
             return (
               <TouchableOpacity
                 onPress={() => {
+                  console.log(item.navigationRoute)
                   navigation.navigate((item.navigationRoute), {item});
                 }}
                 style={{ marginBottom: 20, height: ITEM_HEIGHT }}

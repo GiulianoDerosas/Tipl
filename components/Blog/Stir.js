@@ -9,9 +9,10 @@ import styles from "./styles";
 
 const Stir = ({ navigation, route }) => {
 
+  // const {item} = route.params;
+
   return (
-    <SafeAreaView style={styles.container}>
-      <View>
+      <View style={styles.container}>
             <Text style={{color: '#fff'}}>
                 Blah Blah Blah
             </Text>
@@ -24,7 +25,7 @@ const Stir = ({ navigation, route }) => {
                 Blah Blah Blah
             </Text>
       </View>
-    </SafeAreaView>
+
   );
 };
 
