@@ -47,3 +47,4 @@ A cocktail companion app built with React Native and Expo. Users can add ingredi
 
 <p>Here are a few gifs showing the functionality of the app:</p>
 
+<img src="https://i.ibb.co/Wtgd2hV/Simulator-Screen-Recording-i-Phone-12-Pro-Max-2021-07-11-at-19-03-51.gif"><p>Basic Navigation</p></img>
