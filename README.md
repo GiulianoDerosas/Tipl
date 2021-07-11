@@ -48,10 +48,3 @@ A cocktail companion app built with React Native and Expo. Users can add ingredi
 <p>Here are a few gifs showing the functionality of the app:</p>
 
 <img align="justify" src="https://i.ibb.co/5h2YRS3/Show-Screens.gif"><p>Showing each screen.</p></img>
-<img align="justify" src="https://i.ibb.co/qm7rZYh/Screenshot-2021-07-11-at-6-14-18-PM.png" width="1280" />i
-
-[url=https://ibb.co/WvsD2MX][img]https://i.ibb.co/5h2YRS3/Show-Screens.gif[/img][/url]
-[url=https://ibb.co/NW8f9N1][img]https://i.ibb.co/GCKGWMs/Filter-Drink-By-Ingredients.gif[/img][/url]
-[url=https://ibb.co/LgBL2rX][img]https://i.ibb.co/SmHh9c4/Show-Ingredients.gif[/img][/url]
-[url=https://ibb.co/f4ZzRfG][img]https://i.ibb.co/qkh3GKF/Show-Drinks.gif[/img][/url]
-[url=https://ibb.co/5BxQty3][img]https://i.ibb.co/QrjWzRV/Show-Guides.gif[/img][/url]
