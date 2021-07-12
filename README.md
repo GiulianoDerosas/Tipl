@@ -35,7 +35,7 @@ A cocktail companion app built with React Native and Expo. Users can add ingredi
   <li>In the General panel, click Downloads.</li>
   <li>On the Downloads window, choose the Components tab.</li>
   <li>Click the Install button next to Command Line Tools.</li>
-  <li>Start the app by entering <pre><code>$ expo start </code></pre> and then pressing 'i' in the terminal</li>
+  <li>Start the app by entering <pre><code>$ expo start </code></pre> then you can open the simulator by pressing 'i' in the terminal.</li>
 </ol>
 
 <p>From there, the app should open up and you can start browsing drinks and adding ingredients</p>
