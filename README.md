@@ -54,7 +54,7 @@ A cocktail companion app built with React Native and Expo. Users can add ingredi
   <img src="https://i.ibb.co/q70bSPv/Simulator-Screen-Recording-i-Phone-12-Pro-Max-2021-07-11-at-19-06-09.gif"><p>Guide Section</p></img>
   ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-  <img src="https://i.ibb.co/PTkZW1f/Simulator-Screen-Recording-i-Phone-12-Pro-Max-2021-07-11-at-19-08-53.gif"><p>Browing Drinks via Search</p></img>
+  <img src="https://i.ibb.co/PTkZW1f/Simulator-Screen-Recording-i-Phone-12-Pro-Max-2021-07-11-at-19-08-53.gif"><p>Browsing Drinks via Search</p></img>
   ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
   <img src="https://i.ibb.co/sPWD5bS/Simulator-Screen-Recording-i-Phone-12-Pro-Max-2021-07-11-at-19-11-48.gif"><p>Adding Ingredients to MyBar</p></img>
