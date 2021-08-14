@@ -7,7 +7,7 @@
 <h2 id="about-the-project"> :pencil: About The Project</h2>
 
 <p align="justify"> 
-A cocktail companion app built with React Native and Expo. Users can add ingredients to their inventory and get drink suggestions based on the ingredients they own. Users can learn how to make each drink through clear instructions, and browse for cocktails by name. Each cocktail has a custom illustration to guide the user on how it should look.</p>
+A cocktail companion app built with React Native and Expo. Users can add ingredients to their inventory and get drink suggestions based on the ingredients they own. Users can learn how to make each drink through clear instructions, and browse for cocktails by name. Each cocktail has a custom illustration to guide the user on how it should look, the ingredients and how to prepare.</p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
